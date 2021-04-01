@@ -36,7 +36,7 @@ public class KafkaConsumerTest {
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "application-group-" + System.currentTimeMillis());
         properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         consumer = new KafkaConsumer<>(properties);
-        consumer.subscribe(Collections.singleton("topicTest"));
+        consumer.subscribe(Collections.singleton("enriched_pageviews"));
     }
 
     /**
