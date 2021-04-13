@@ -56,7 +56,7 @@ public class KafkaConsumerTest {
         while (true) {
             ConsumerRecords<String, String> poll = consumer.poll(Duration.ofMillis(5000));
             if (poll == null || poll.isEmpty()) {
-                System.out.println("消费完成");
+                System.out.println("读取完成。。。。");
                 break;
             }
             for (ConsumerRecord<String, String> record : poll) {
